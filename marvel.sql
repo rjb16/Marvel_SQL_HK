@@ -60,7 +60,7 @@ SELECT name FROM people;
 
 --Oops! Someone spelled Krusty The Clown's name wrong! Change it to reflect the proper spelling (Crusty should be Krusty).
 
-UPDATE people SET (name) = ('Krusty The Clown') Where name = 'Crusty the Clown';
+UPDATE people SET name = ('Krusty The Clown') WHERE name = 'Crusty the Clown';
 
 --Return ONLY Homer Simpson's name from the 'people' table.
 
@@ -86,10 +86,15 @@ INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Infinity war', 20
 
 --The cinema would like to make the Iron Man movies a triple billing. Find out the show time of "Iron Man 2" and set the show time of "Iron Man 3" to start two hours later.
 
-UPDATE movies SET time = 20:45 WHERE name = 'Iron Man 2';
+UPDATE movies SET time = 20:45 WHERE title = 'Iron Man 2';
 
 
 --Research how to delete multiple entries from your table in a single command.
 
 --DELETE TOP 10 FROM target_table;  
 --DELETE FROM production.product_history WHERE model_year = 2017;
+
+
+SELECT * FROM movies;
+SELECT name FROM people;
+
